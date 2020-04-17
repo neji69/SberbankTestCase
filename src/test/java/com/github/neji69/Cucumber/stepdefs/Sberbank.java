@@ -3,10 +3,11 @@ package com.github.neji69.Cucumber.stepdefs;
 import com.github.neji69.Sberbank.DepositPage;
 import com.github.neji69.Sberbank.DriveDepositOfferPage;
 import com.github.neji69.Sberbank.HomePage;
-import io.cucumber.java.ru.*;
+import io.cucumber.java.ru.Дано;
+import io.cucumber.java.ru.Затем;
+import io.cucumber.java.ru.Тогда;
 
 import java.util.List;
-
 
 public class Sberbank {
     HomePage homePage = new HomePage();
@@ -16,7 +17,6 @@ public class Sberbank {
     @Дано("перейти на {string}")
     public void openUrl(String string) {
         homePage.openPage();
-
     }
 
     @Тогда("проверка перехода, название страницы {string}")
@@ -25,9 +25,9 @@ public class Sberbank {
     }
 
     @Затем("перейти через верхнее меню во {string}")
-    public void goToMenuAndClickDeposit(String string) {
-        homePage.chooseMenuItem("Вклады");
-        homePage.chooseSubMenuItem("Вклады");
+    public void goToMenuAndClickDeposit(String item) {
+        homePage.chooseMenuItem(item);
+        homePage.chooseSubMenuItem(item);
     }
 
     @Затем("перейти на вкладку «Подобрать вклад»")

@@ -4,7 +4,6 @@
     <test  name="W" parallel="classes" thread-count="1">
         <classes>
             <class name="com.github.neji69.Cucumber.CucumberRunnerTest"></class>
-            <class name="com.github.neji69.TestCaseHomework"></class>
         </classes>
     </test>
 </suite>

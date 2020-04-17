@@ -5,8 +5,7 @@ import org.openqa.selenium.By;
 
 import java.util.List;
 
-import static com.codeborne.selenide.CollectionCondition.exactTexts;
-import static com.codeborne.selenide.CollectionCondition.textsInAnyOrder;
+import static com.codeborne.selenide.CollectionCondition.*;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.*;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -86,8 +85,10 @@ public class DepositPage {
      * Метод кликает по вкладке "Подобрать вклад"
      */
     public void clickTabPodobrat() {
-        tabPodobratVklad.doubleClick();
-        tabPodobratVklad.doubleClick();
+        tabPodobratVklad.scrollTo();
+        sleep(1000); //без слипа на этом месте часто пролагивает, видимо слабый комп.
+        tabPodobratVklad.click();
+
 
     }
 
